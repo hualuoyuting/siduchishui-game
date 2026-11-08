@@ -1,6 +1,6 @@
 # 四渡赤水 (Four Crossings of Chishui)
 
-一款基于 **Unity 引擎**的第一人称射击游戏，还原1935年中国工农红军长征途中四渡赤水的经典战役。
+一款基于 **Godot 4.3 引擎**的第一人称射击游戏，还原1935年中国工农红军长征途中四渡赤水的经典战役。
 
 ## 游戏简介
 
@@ -19,38 +19,39 @@
 
 ## 技术栈
 
-- **引擎**: Unity 2022.3 LTS (推荐)
-- **语言**: C#
-- **渲染**: URP (通用渲染管线)
-- **目标平台**: PC (Windows)
+- **引擎**: Godot 4.3 (Forward+ 渲染管线)
+- **语言**: GDScript
+- **目标平台**: PC (Windows/Linux/Mac)
+- **渲染**: 3D 第一人称视角
 
 ## 项目结构
 
 ```
-├── Assets/
-│   ├── Scripts/
-│   │   ├── Player/          # 玩家控制器、生命、体力
-│   │   ├── Weapons/         # 武器系统、弹道
-│   │   ├── Enemies/         # 敌人AI、敌人生命
-│   │   ├── Mission/         # 任务系统、目标点
-│   │   ├── Raft/            # 竹筏渡河系统
-│   │   ├── UI/              # HUD、任务面板
-│   │   ├── Chapter/         # 章节管理
-│   │   └── Audio/           # 音频管理
-│   ├── Scenes/              # 游戏场景
-│   ├── Prefabs/             # 预制体
-│   ├── Art/                # 美术资源
-│   └── Audio/              # 音频资源
-├── ProjectSettings/         # 项目设置
+├── project.godot          # Godot 项目配置
+├── scripts/
+│   ├── player/             # 玩家控制器、生命、体力
+│   ├── weapons/            # 武器系统
+│   ├── enemies/            # 敌人AI、敌人生命
+│   ├── mission/            # 任务系统、目标点
+│   ├── raft/               # 竹筏渡河系统
+│   ├── ui/                 # HUD、任务面板
+│   └── game_manager.gd     # 全局管理器
+├── scenes/
+│   ├── main.tscn           # 主菜单
+│   ├── chapter1_tucheng.tscn   # 第一章：土城突围
+│   ├── chapter2_loushan.tscn   # 第二章：娄山关
+│   ├── chapter3_maotai.tscn    # 第三章：茅台镇
+│   └── chapter4_jinsha.tscn    # 第四章：金沙江
+├── assets/                # 美术/音频资源
 └── README.md
 ```
 
 ## 快速开始
 
-1. 安装 Unity Hub 并添加 **Unity 2022.3 LTS**
+1. 下载安装 [Godot 4.3](https://godotengine.org/download)
 2. Clone 本仓库
-3. 用 Unity Hub 打开项目
-4. 打开 `Assets/Scenes/Boot.unity` 开始运行
+3. 用 Godot 打开 `project.godot`
+4. 按 F5 运行，主菜单选择章节
 
 ## 操作说明
 
@@ -64,14 +65,13 @@
 | E | 交互 (登船/使用) |
 | R | 换弹 |
 | F | 火力模式切换 |
-| Tab | 任务日志 |
 
 ## 开发状态
 
 - [x] 核心玩法框架 (FPS移动、射击、生命系统)
 - [x] 任务目标系统
 - [x] 竹筏渡河机制
-- [x] 敌人基础AI
+- [x] 敌人基础AI (状态机)
 - [ ] 第一章场景美术
 - [ ] 音效与配乐
 - [ ] 完整关卡流程
