@@ -1,0 +1,69 @@
+{
+  "map": {
+    "name": "川黔滇边界",
+    "scale": "1km = 4px",
+    "river": {
+      "name": "赤水河",
+      "source": "云南镇雄",
+      "mouth": "四川合江",
+      "direction": "西向东，茅台镇后转向西北",
+      "crossing_cost": 2
+    }
+  },
+  "locations": [
+    {"id": "tucheng", "name": "土城", "x": 400, "y": 200, "type": "渡口", "faction": "红军", "note": "一渡起点"},
+    {"id": "yuanhou", "name": "元厚", "x": 380, "y": 220, "type": "渡口", "faction": "川军", "note": "一渡渡口（猿猴场）"},
+    {"id": "gulin", "name": "古蔺", "x": 250, "y": 180, "type": "城镇", "faction": "川军", "note": "一渡后到达"},
+    {"id": "xuyong", "name": "叙永", "x": 200, "y": 160, "type": "城镇", "faction": "川军", "note": "一渡后目标"},
+    {"id": "zhaxi", "name": "扎西", "x": 150, "y": 250, "type": "集结地", "faction": "中立", "note": "云南威信，一渡后集结"},
+    {"id": "taipingdu", "name": "太平渡", "x": 420, "y": 280, "type": "渡口", "faction": "黔军", "note": "二渡/四渡渡口"},
+    {"id": "erlaitan", "name": "二郎滩", "x": 430, "y": 310, "type": "渡口", "faction": "黔军", "note": "二渡/四渡渡口"},
+    {"id": "jiuxikou", "name": "九溪口", "x": 440, "y": 340, "type": "渡口", "faction": "黔军", "note": "二渡渡口"},
+    {"id": "loushanguan", "name": "娄山关", "x": 550, "y": 380, "type": "关隘", "faction": "黔军", "note": "遵义以北天险"},
+    {"id": "zunyi", "name": "遵义", "x": 580, "y": 420, "type": "城市", "faction": "黔军", "note": "黔北重镇"},
+    {"id": "lubanChang", "name": "鲁班场", "x": 380, "y": 380, "type": "阵地", "faction": "中央军", "note": "三渡前未攻克"},
+    {"id": "maotai", "name": "茅台镇", "x": 360, "y": 360, "type": "渡口", "faction": "中央军", "note": "三渡渡口"},
+    {"id": "lintang", "name": "淋滩", "x": 410, "y": 330, "type": "渡口", "faction": "中央军", "note": "四渡渡口"},
+    {"id": "wujiang", "name": "乌江", "x": 600, "y": 500, "type": "渡口", "faction": "黔军", "note": "四渡后南渡"},
+    {"id": "guiyang", "name": "贵阳", "x": 650, "y": 550, "type": "省会", "faction": "黔军", "note": "兵临贵阳虚晃一枪"},
+    {"id": "jiaopingdu", "name": "皎平渡", "x": 100, "y": 600, "type": "渡口", "faction": "滇军", "note": "金沙江最终渡河点"}
+  ],
+  "chapters": [
+    {
+      "id": 1,
+      "name": "一渡赤水",
+      "date": "1935.1.29",
+      "start": "土城",
+      "end": "扎西",
+      "historical_event": "土城战斗失利后，红军主动撤出，西渡赤水河",
+      "key_battle": "土城阻击战"
+    },
+    {
+      "id": 2,
+      "name": "二渡赤水",
+      "date": "1935.2.18-21",
+      "start": "扎西",
+      "end": "遵义",
+      "historical_event": "回师黔北，奇袭娄山关，再占遵义",
+      "key_battle": "娄山关战斗"
+    },
+    {
+      "id": 3,
+      "name": "三渡赤水",
+      "date": "1935.3.16-17",
+      "start": "遵义",
+      "end": "古蔺",
+      "historical_event": "鲁班场未克，茅台镇西渡，佯动北渡长江",
+      "key_battle": "鲁班场攻坚（未克）"
+    },
+    {
+      "id": 4,
+      "name": "四渡赤水",
+      "date": "1935.3.21-22",
+      "start": "古蔺",
+      "end": "皎平渡",
+      "historical_event": "金蝉脱壳，再渡赤水，南渡乌江，逼贵阳，入云南，巧渡金沙江",
+      "key_battle": "巧渡金沙江"
+    }
+  ]
+}
